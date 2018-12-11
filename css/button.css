@@ -1,0 +1,30 @@
+div {
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  background: #0aa1ed;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px; }
+
+.info {
+  background: green;
+  border: 2px solid #f10215;
+  box-shadow: 0 0 9px 2px gray;
+  -moz-box-shadow: 0 0 9px 2px gray;
+  -ms-box-shadow: 0 0 9px 2px gray;
+  -webkit-box-shadow: 0 0 9px 2px gray; }
+
+.my_font {
+  font-size: 36px;
+  font-style: normal;
+  color: #fff;
+  font-weight: 4000; }
+
+.round, .round-shadow {
+  border: 1px solid indianred;
+  border-radius: 8px; }
+
+.round-shadow {
+  box-shadow: 0 0 5px 1px; }

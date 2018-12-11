@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画关键帧</title>
+    <style>
+        /* 1. 声明动画 change是关键帧的名称*/
+        @keyframes change {
+            /* 定义关键帧 */
+            0% {
+                background-color: royalblue;
+                border-radius: 0%;
+            }
+            25% {
+                background-color: blanchedalmond;
+                margin-top: 200px;
+                margin-left: 200px;
+                border-radius: 25%;
+            }
+            50% {
+                background-color: fuchsia;
+                margin-top: 100px;
+                border-radius: 50%;
+            }
+            75% {
+                background-color: royalblue;
+                margin-top: 200px;
+                margin-left: 200px;
+                border-radius: 75%;
+            }
+            100% {
+                background-color: palevioletred;
+                margin-top: 500px;
+                margin-left: 40px;
+                border-radius: 100%;
+            }
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        div:hover {
+            /* 2. 调用动画 */
+            animation-name: change;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: reverse;
+        }
+
+
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@import "color";
+$font_size : 16px;
+$font_color : #fff;
+$border_radius:5px;
+$width:200px;
+$height:50px;
+div{
+    width: $width;
+    height: $height;
+    font-size: $font_size;
+    color: #fff;
+    background: $background;
+    border-radius: $border_radius;
+    text-align:center;
+    line-height: $height;
+}
+@mixin my_box_shadow{
+    box-shadow: 0 0 9px 2px gray;
+    -moz-box-shadow: 0 0 9px 2px gray;
+    -ms-box-shadow: 0 0 9px 2px gray;
+    -webkit-box-shadow: 0 0 9px 2px gray;
+}
+.info{
+    background:green;
+    border:2px solid $jd_red;
+    @include my_box_shadow
+}
+@mixin font_mixin($size,$style,$color,$weight){
+    font-size: $size;
+    font-style: $style;
+    color:$color;
+    font-weight: $weight;
+}
+
+.my_font{
+    @include font_mixin(36px,normal,#fff,4000)
+}
+
+.round{
+    border: 1px solid indianred;
+    border-radius: 8px;
+}
+.round-shadow{
+    @extend .round;
+    box-shadow: 0 0 5px 1px;
+}
+
+

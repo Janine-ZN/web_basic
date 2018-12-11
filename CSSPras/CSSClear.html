@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-清除浮动练习</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            background-color: red;
+            /*兼容IE6，IE6不兼容伪标签和 overflow: hidden;*/
+            /**zoom: 1;*/
+
+            /*清除浮动方式一：给前面一个父元素设置高度*/
+            /*height: 21px;*/
+
+            /*margin-bottom: 10px;*/
+
+            /*清除浮动方式五：设置overflow: hidden;*/
+            overflow: hidden;
+        }
+        .box2{
+            background-color: green;
+            /*清除浮动方式二：给后面的盒子添加clear属性，这里设置清除左浮动*/
+            /*clear: left;*/
+
+            /*margin-top: 10px;*/
+        }
+        .box1 p{
+            width: 100px;
+            background-color: blue;
+            /*让第一个div的p中的文字左浮*/
+            float: left;
+        }
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+            /*让第二个div的p中的文字左浮*/
+            float: left;
+        }
+        /*.wall{
+            clear: both;
+        }*/
+
+        /*.box1::after{
+            !*设置添加的子元素的内容为空*!
+            content: '';
+            !*设置添加的子元素为块级元素*!
+            display: block;
+            !*设置添加的子元素的高度为0*!
+            height: 0;
+            !*设置添加的子元素看不见*!
+            visibility: hidden;
+            !*设置添加的子元素清除浮动*!
+            clear: both;
+        }*/
+
+    </style>
+</head>
+<body>
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <!--内墙法-->
+    <!--<div class="wall"></div>-->
+</div>
+<!--外墙法-->
+<!--<div class="wall"></div>-->
+<div class="box2">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+</div>
+</body>
+</html>

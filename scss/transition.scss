@@ -1,0 +1,11 @@
+$jd_red:red;
+.my_transition{
+  width: 200px;
+  height: 200px;
+  background: $jd_red;
+  transition:{property: all;duration: 2s;timing-function: linear}
+  &:hover{
+    background: yellow;
+    border-radius: 50%;
+  }
+}

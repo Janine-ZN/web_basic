@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3-2D转换模块</title>
+    <style type="text/css">
+        ul {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        ul li {
+            list-style: none;
+            width: 100px;
+            line-height: 50px;
+            margin: 0 auto;
+            margin-top: 40px;
+            background-color: red;
+        }
+
+        ul li:nth-child(2) {
+            /*deg是单位，代表多少度*/
+            /*  rotate：vi. 旋转；循环
+                vt. 使旋转；使转动；使轮流
+                adj. [植] 辐状的        */
+            transform: rotate(45deg);
+            transform-origin: left top;
+
+        }
+
+        ul li:nth-child(3) {
+            /*第一个参数：水平方向
+              第二个参数：垂直方向*/
+            /*  translate：vt. 翻译；转化；解释；转变为；调动
+                vi. 翻译*/
+            transform: translate(-100px, 0);
+        }
+
+        ul li:nth-child(4) {
+            /*第一个参数：水平方向
+              第二个参数：垂直方向
+              注意点：
+              如果取值是1，代表不变；
+              如果取值大于1，代表需要放大；
+              如果取值小于1，代表需要缩小；
+              如果水平和垂直缩放都一样，那么可以简写为一个参数
+              */
+            /*  scale：n. 规模；比例；鳞；刻度；天平；数值范围
+                vi. 衡量；攀登；剥落；生水垢
+                vt. 测量；攀登；刮鳞；依比例决定*/
+            transform: scale(1, 1.5);
+        }
+
+        ul li:nth-child(5) {
+            /*注意点：
+            1.如果需要进行多个转换，那么用空格隔开
+            2.2D的转换模块会修改元素的坐标系，所以旋转之后再平移就不是水平平移的
+            */
+            transform: rotate(45deg) translate(-100px, 0) scale(1.5);
+        }
+
+        ul li:nth-child(6){
+            transform:translate(200px,200px) rotate(135deg) skewX(45deg) scale(1.5);
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>正常</li>
+    <li>旋转</li>
+    <li>平移</li>
+    <li>缩放</li>
+    <li>综合</li>
+    <li>2D转换练习</li>
+</ul>
+</body>
+</html>

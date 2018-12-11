@@ -1,0 +1,10 @@
+.my_transition {
+  width: 200px;
+  height: 200px;
+  background: red;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear; }
+  .my_transition:hover {
+    background: yellow;
+    border-radius: 50%; }

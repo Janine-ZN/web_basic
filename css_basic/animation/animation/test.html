@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        .clock {
+            width: 200px;
+            height: 200px;
+            border: 2px solid blue;
+            margin: 0 auto;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .minute {
+            width: 0px;
+            height: 50px;
+            position: absolute;
+            top: 58px;
+            left: 98px;
+            border: 2px solid red;
+            transform-origin: center bottom;
+            -webkit-animation:turn 3600s linear infinite;
+            -o-animation:turn 3600s linear infinite;
+            animation:turn 3600s linear infinite;
+        }
+
+        .second {
+            width: 0px;
+            height: 70px;
+            border: 1px solid #1e66b0;
+            position: absolute;
+            top: 40px;
+            left: 99px;
+            transform-origin: center bottom;
+            -webkit-animation:turn 60s linear infinite;
+            -o-animation:turn 60s linear infinite;
+            animation:turn 60s linear infinite;
+        }
+
+
+        @keyframes turn {
+            0% {
+
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="clock">
+    <div class="minute"></div>
+    <div class="second"></div>
+</div>
+</body>
+</html>

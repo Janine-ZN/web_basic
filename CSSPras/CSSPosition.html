@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-子绝父相</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+            width: 800px;
+            height: 50px;
+            background-color: #818081;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            line-height: 50px;
+        }
+        ul li:nth-of-type(4){
+            background-color: yellow;
+            position: relative;
+        }
+        /*ul li imgs{
+            !*相对定位弊端：
+            相对定位不会脱离标准流，会继续在标准流中占用一份空间，所以不利于布局界面*!
+            position: relative;
+            top:-20px;
+            left:-20px;
+        }*/
+        /*ul li imgs{
+            !*绝对定位弊端：
+             默认情况下绝对定位的元素会以body作为参考点，所以会随着浏览器的宽度高度的变化而变化*!
+            position: absolute;
+            top:0px;
+            left:0px;
+        }*/
+        /*ul li imgs{
+            !*子绝父相*!
+            position: absolute;
+            top:-5px;
+            left:45px;
+        }*/
+        ul li img{
+            /*图片始终针对父元素水平居中，如何让绝对定位的元素水平居中？
+            只需要设置绝对定位元素的left：50%，然后再设置绝对定位元素的margin-left: -元素宽度的一半px;
+            这样img的父元素li元素宽度不管多大，img都是居中的
+            */
+            position: absolute;
+            top:-5px;
+            left:50%;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>服装城</li>
+        <li>美妆馆</li>
+        <li>京东超市</li>
+        <li>全球购<img src="img/hot.gif" alt="">
+        </li>
+        <li>闪购</li>
+        <li>团购</li>
+        <li>拍卖</li>
+        <li>金融</li>
+    </ul>
+
+
+
+</body>
+</html>

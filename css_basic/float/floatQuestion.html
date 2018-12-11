@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动产生的问题</title>
+    <style>
+        .child1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+
+        .child2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            float: left;
+        }
+
+        .parent {
+            border: 1px solid #000;
+            /*width: 500px;       !* 针对overflow:hidden做测试 *!*/
+            /*!* 方法一：给父元素加个框 *!
+            height: 200px;*/
+
+            /*!* 方法二：设置父元素也浮动：（1）父元素的边框会围在子元素周围（2）父元素的高度跟着子元素最高的那个 *!
+            float: left;*/
+
+            /*!* 方法三：取值 hidden/auto 均可 *!*/
+            /*overflow : hidden;*/
+        }
+
+        /*!* 方法四：在父元素中，追加一个空的块级元素，并设置其clear:both *!
+        .float_p{
+            clear: both;
+        }*/
+
+        .parent::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<!--浮动产生的问题
+	问题:对父元素高度带来的影响
+	解析:元素的高度，都是以未浮动元素的高度为准，浮动元素是不占页面空间的，
+所以一旦子元素浮动起来，那么父元素高度将为 0（俗称父元素高度坍塌）
+	方案:
+	1. 直接设置父元素的高度
+	弊端：不是每次都知道父元素的高度
+	2. 设置父元素也浮动
+	弊端：不是任何时候父元素都需要浮动，且浮动会影响后续元素（后续元素会上前补位）
+	3. 设置父元素的 overflow，取值：hidden/auto
+	弊端：如果有内容要溢出显示的话，也会一同隐藏起来
+	4. 在父元素中，追加一个空的块级元素，并设置其clear:both
+	5. CSS3 核心内容 ::after{content:"";display:block;clear:both}-->
+
+<div class="parent">
+    <div class="child1"></div>
+    <div class="child2"></div>
+    <!-- 方法四：在父元素中，追加一个空的块级元素，并设置其clear:both   -->
+    <!--<p class="float_p"></p>-->
+</div>
+
+
+</body>
+</html>

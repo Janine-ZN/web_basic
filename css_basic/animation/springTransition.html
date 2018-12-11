@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-过渡效果-弹性效果</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            height: 100px;
+            margin: 100px auto 0;
+            background-color: red;
+            text-align: center;
+            /* 设置变化的属性和时间 */
+            transition: margin 0.5s;
+           /* transition-property: margin-left;
+            transition-duration: 0.5s;*/
+        }
+        div span{
+            line-height: 100px;
+            font-family: "宋体";
+            font-size: 80px;
+        }
+
+        div:hover span{
+            /* 变化的效果 */
+            margin: 0 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <span>我</span>
+    <span>要</span>
+    <span>狂</span>
+    <span>虐</span>
+    <span>C</span>
+    <span>S</span>
+    <span>S</span>
+    <span>3</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片墙</title>
+    <style>
+        ul{
+            list-style: none;
+            float: left;
+        }
+
+        ul li img{
+            width: 200px;
+        }
+
+        ul li img:hover{
+            width: 400px;
+            position : relative;
+            left : 15px;
+            top: -10px;
+        }
+    </style>
+</head>
+<body>
+<!-- 模仿照片墙效果，当鼠标悬停在图片上时，图片相对于自己的位置右偏移15px -->
+<ul>
+    <li><img src="../imgs/pic_01.jpg"></li>
+    <li><img src="../imgs/pic_02.jpg"></li>
+    <li><img src="../imgs/pic_03.jpg"></li>
+</ul>
+<ul>
+    <li><img src="../imgs/pic_01.jpg"></li>
+    <li><img src="../imgs/pic_02.jpg"></li>
+    <li><img src="../imgs/pic_03.jpg"></li>
+</ul>
+<ul>
+    <li><img src="../imgs/pic_01.jpg"></li>
+    <li><img src="../imgs/pic_02.jpg"></li>
+    <li><img src="../imgs/pic_03.jpg"></li>
+</ul>
+</body>
+</html>

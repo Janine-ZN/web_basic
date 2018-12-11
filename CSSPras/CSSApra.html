@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-a标签的伪类选择器</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*
+        1.在企业开发中编写a标签的伪类选择器最好写在标签选择器的后面
+        2.在企业开发中和a标签盒子相关的属性都写在标签选择器中（显示模式/宽度/高度/padding/margin）
+        3.在企业开发中和a标签文字/背景相关的都写在伪类选择器中
+        */
+        ul{
+            width: 800px;
+            height: 40px;
+            background-color: purple;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 100px;
+
+        }
+        ul li{
+            line-height: 40px;
+            width: 100px;
+            list-style: none;
+            float: left;
+        }
+        
+        ul li a{
+            width: 100px;
+            height: 40px;
+            background-color: pink;
+            display: inline-block;
+            /*一般情况下，可以将:link和:visited中的样式简写，简写格式如下*/
+            text-decoration: none;
+            color: white;
+        }
+       /* ul li a:link{
+            text-decoration: none;
+            color: white;
+        }
+        ul li a:visited{
+            text-decoration: none;
+            color: white;
+        }*/
+        ul li a:hover{
+            color: red;
+            background-color: #cccccc;
+        }
+        ul li a:active{
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+    <li><a href="#">我是导航</a></li>
+</ul>
+</body>
+</html>

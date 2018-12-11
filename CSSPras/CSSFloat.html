@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-浮动练习</title>
+    <style type="text/css">
+        .header{
+            width: 980px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .header .logo{
+            width: 250px;
+            height: 100px;
+            float: left;
+            background-color: pink;
+        }
+        .header .language{
+            width: 150px;
+            height: 50px;
+            float: right;
+            background-color: cornflowerblue;
+        }
+        .header .nav{
+            width: 650px;
+            height: 50px;
+            float: right;
+            background-color: purple;
+        }
+        .content{
+            width: 980px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 10px;
+            /*background-color: blue;*/
+        }
+        .content .aside{
+            width: 320px;
+            height: 400px;
+            background-color: yellow;
+            float: left;
+        }
+        .content .article{
+            width: 650px;
+            height: 400px;
+            /*background-color: blue;*/
+            float: right;
+        }
+        .content .article .articleTop{
+            width: 650px;
+            height: 350px;
+        }
+        .content .article .articleTop .articleTopLeft{
+            width: 400px;
+            height: 350px;
+            /*background-color: pink;*/
+            float: left;
+        }
+
+        .content .article .articleTop .articleTopRight{
+            width: 240px;
+            height: 350px;
+            background-color: greenyellow;
+            float: right;
+        }
+
+        .content .article .articleTop .articleTopLeft .articleTopLeftUp{
+            width: 400px;
+            height: 200px;
+            background-color: rosybrown;
+        }
+
+        .content .article .articleTop .articleTopLeft .articleTopLeftDown{
+            width: 400px;
+            height: 140px;
+            background-color: yellowgreen;
+            margin-top: 10px;
+        }
+        .content .article .articleBottom{
+            width: 650px;
+            height: 40px;
+            background-color: red;
+            margin-top: 10px;
+        }
+
+        .footer{
+            width: 980px;
+            height: 40px;
+            background-color: pink;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="header">
+    <div class="logo"></div>
+    <div class="language"></div>
+    <div class="nav"></div>
+</div>
+<div class="content">
+<div class="aside"></div>
+<div class="article">
+    <div class="articleTop">
+        <div class="articleTopLeft">
+            <div class="articleTopLeftUp"></div>
+            <div class="articleTopLeftDown"></div>
+
+        </div>
+        <div class="articleTopRight"></div>
+
+
+    </div>
+    <div class="articleBottom"></div>
+</div>
+
+</div>
+<div class="footer">
+
+</div>
+</body>
+</html>

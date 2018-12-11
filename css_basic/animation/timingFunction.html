@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS-过渡模块</title>
+    <style type="text/css">
+        /***************************** transition 的其他属性 ***************************************/
+        ul {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+
+        ul li {
+            list-style: none;
+            width: 100px;
+            line-height: 50px;
+            margin-top: 40px;
+            background-color: red;
+            /*transition-property: margin-left;
+            transition-duration: 10s;*/
+            transition: margin-left 10s;
+        }
+
+        ul li:nth-child(1) {
+            /*告诉系统过渡动画的运动的速度*/
+            transition-timing-function: linear;
+        }
+
+        ul li:nth-child(2) {
+            transition-timing-function: ease;
+        }
+
+        ul li:nth-child(3) {
+            transition-timing-function: ease-in;
+        }
+
+        ul li:nth-child(4) {
+            transition-timing-function: ease-out;
+        }
+
+        ul li:nth-child(5) {
+            transition-timing-function: ease-in-out;
+        }
+
+        ul:hover li {
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>linear</li>
+    <li>ease</li>
+    <li>ease-in</li>
+    <li>ease-out</li>
+    <li>ease-in-out</li>
+</ul>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础选择器</title>
+    <style>
+        #_myId{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+
+        .-myClass{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        #-myId{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+
+        ._myClass{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+<!-- id 和 class 的命名方式，不能以数字开头，不能包含特殊字符，但可以包含（-，_）-->
+<div id="_myId"></div>
+<div class="-myClass"></div>
+<div id="-myId"></div>
+<div class="_myClass"></div>
+</body>
+</html>
