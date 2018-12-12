@@ -1,0 +1,9 @@
+@function getSize($n){
+  $max_width:60px;
+  $min_width:10px;
+  @return $n*$max_width + ($n - 1)*$min_width;
+}
+header{
+  height: getSize(2);
+  width: getSize(4);
+}

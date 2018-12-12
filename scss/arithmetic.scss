@@ -1,0 +1,8 @@
+div{
+  font-size:10px/80px;
+  $width:1000px;
+  width: $width;
+  height: (500px/2);
+  background: red;
+  border:1px solid #000000;
+}
